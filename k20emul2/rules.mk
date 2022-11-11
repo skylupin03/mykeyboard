@@ -47,7 +47,6 @@ RGB_MATRIX_DRIVER = WS2812
 #RGB_ENCODERS = yes # For RGB encoders, solder on both WS2811 chips
 #STAGGERED_LAYOUT = no # If you soldered R1-A12 and R4-A12, enable this.
 
-
 #LED_MATRIX_ENABLE = yes
 LED_MATRIX_DRIVER = IS31FL3731
 
