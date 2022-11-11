@@ -1,0 +1,103 @@
+// Copyright 2022 jamesYun (@skylupin03)
+// SPDX-License-Identifier: GPL-2.0-or-later
+
+#pragma once
+
+
+//#define WAIT_US_TIMER           GPTD3
+//#define STM32_GPT_USE_TIM3 TRUE		// Board 디렉토리 파일에 디파인 있음
+
+/* disable debug print */
+//#define NO_DEBUG
+
+/* disable print */
+//#define NO_PRINT
+
+/* disable action features */
+//#define NO_ACTION_LAYER
+//#define NO_ACTION_TAPPING
+//#define NO_ACTION_ONESHOT
+
+#define FORCE_NKRO
+
+/* Bootmagic Lite key configuration */
+#define EARLY_INIT_PERFORM_BOOTLOADER_JUMP TRUE
+#define BOOTMAGIC_LITE_ROW                 0
+#define BOOTMAGIC_LITE_COLUMN              0
+/*
+#define BACKLIGHT_PIN B8
+#define BACKLIGHT_LEVELS 3
+#define BACKLIGHT_BREATHING
+#define BREATHING_PERIOD 6
+*/
+#define LED_NUM_LOCK_PIN    B12
+#define LED_CAPS_LOCK_PIN   B14
+#define LED_SCROLL_LOCK_PIN B15
+#define LED_JAMES1_PIN	C13
+#define	LED_JAMES2_PIN	C14
+
+#define LED_PIN_ON_STATE    0
+
+#define HARDWARE_RESET_PIN  A0
+#define BUTTON_EXT_PIN	C15
+
+ 
+#define BACKLIGHT_LEVELS 5
+
+/* LED Matrix Driver Configuration */
+#define LED_DRIVER_COUNT 1
+#define LED_DRIVER_ADDR_1 0b1110100 //0b1110111
+//#define DRIVER_ADDR_2 0b1110110   //0b1110100
+
+//#define ISSI_TIMEOUT    100     // option
+#define ISSI_PERSISTENCE 3     // option
+
+#define LED_DRIVER_1_LED_TOTAL 144     // 104
+//#define DRIVER_2_LED_TOTAL 37
+#define DRIVER_LED_TOTAL LED_DRIVER_1_LED_TOTAL       //  + DRIVER_2_LED_TOTAL)
+
+//#define LED_MATRIX_ROWS 15
+//#define LED_MATRIX_COLS 7
+
+#define LED_MATRIX_MAXIMUM_BRIGHTNESS 255
+
+#define LED_DISABLE_WHEN_USB_SUSPENDED
+
+// #define LED_MATRIX_CENTER {112, 32}   
+
+/* Scan phase of led driver set as MSKPHSE_9CHANNEL(defined as 0x03 in CKLED2001.h) */
+//#define PHASE_CHANNEL MSKPHASE_9CHANNEL
+
+/* Enable caps-lock LED */
+#define CAPS_LOCK_LED_INDEX 0
+#define SCROLL_LOCK_LED_INDEX 1
+#define NUM_LOCK_LED_INDEX 47
+
+#define LED_MATRIX_KEYPRESSES // reacts to keypresses
+//#define LED_MATRIX_KEYRELEASES // reacts to keyreleases (instead of keypresses)
+
+#define ENABLE_LED_MATRIX_ALPHAS_MODS
+
+#define ENABLE_LED_MATRIX_BREATHING
+#define ENABLE_LED_MATRIX_BAND
+#define ENABLE_LED_MATRIX_BAND_PINWHEEL
+#define ENABLE_LED_MATRIX_BAND_SPIRAL
+#define ENABLE_LED_MATRIX_CYCLE_LEFT_RIGHT
+#define ENABLE_LED_MATRIX_CYCLE_UP_DOWN
+#define ENABLE_LED_MATRIX_CYCLE_OUT_IN
+#define ENABLE_LED_MATRIX_DUAL_BEACON   
+
+#if defined(LED_MATRIX_KEYPRESSES)   // #if defined(LED_MATRIX_KEYREACTIVE_ENABLED)
+#    define ENABLE_LED_MATRIX_SOLID_REACTIVE_SIMPLE
+#    define ENABLE_LED_MATRIX_SOLID_REACTIVE_WIDE
+#    define ENABLE_LED_MATRIX_SOLID_REACTIVE_MULTIWIDE
+#    define ENABLE_LED_MATRIX_SOLID_REACTIVE_CROSS
+#    define ENABLE_LED_MATRIX_SOLID_REACTIVE_MULTICROSS
+#    define ENABLE_LED_MATRIX_SOLID_REACTIVE_NEXUS
+#    define ENABLE_LED_MATRIX_SOLID_REACTIVE_MULTINEXUS
+#    define ENABLE_LED_MATRIX_SPLASH
+#    define ENABLE_LED_MATRIX_MULTISPLASH
+#endif
+#define ENABLE_LED_MATRIX_WAVE_LEFT_RIGHT
+#define ENABLE_LED_MATRIX_WAVE_UP_DOWN
+#define ENABLE_LED_MATRIX_EFFECT_MAX
