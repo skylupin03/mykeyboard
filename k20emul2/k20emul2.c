@@ -177,28 +177,28 @@ void rgb_matrix_indicators_kb(void) {
         switch (layer) {
             case 0:
                 // rgb_matrix_set_color(pgm_read_byte(&convert_led_location2number[11]),  RGB_RED);         //  RGB_TOG  <- too heavy.
-                rgb_matrix_set_color(254, 20, 20, 20);
+                rgb_matrix_set_color(247, 20, 20, 20);
                 break;
             case 1:
-                rgb_matrix_set_color(253, 20, 20, 20);
+                rgb_matrix_set_color(246, 20, 20, 20);
                 break;
             case 2:
-                rgb_matrix_set_color(252, 20, 20, 20);
+                rgb_matrix_set_color(245, 20, 20, 20);
                 break;
             case 3:
-                rgb_matrix_set_color(251, 20, 20, 20);
+                rgb_matrix_set_color(244, 20, 20, 20);
                 break;
         }
 
         led_t host_leds = host_keyboard_led_state();
         if (host_leds.caps_lock) {
-                rgb_matrix_set_color(250, 20, 20, 20);
+                rgb_matrix_set_color(243, 20, 20, 20);
         }
         if (host_leds.scroll_lock) {
-                rgb_matrix_set_color(249, 20, 20, 20);
+                rgb_matrix_set_color(242, 20, 20, 20);
             }
         if (host_keyboard_led_state().num_lock) {
-                rgb_matrix_set_color(248, 20, 20, 20);
+                rgb_matrix_set_color(241, 20, 20, 20);
             }
     }
 }
@@ -233,7 +233,7 @@ led_config_t g_led_config = { // K20 Key Matrix & 31FL3731 KEYBOARD LED TEST arr
         {183,  0}, {183,  9}, {183, 18}, {183, 27}, {183, 36}, {183, 45}, {183, 54}, {183, 63},     {183, 63}, {183, 54}, {183, 45}, {183, 36}, {183, 27}, {183, 18}, {183,  9}, {183,  0},
         {190,  0}, {190,  9}, {190, 18}, {190, 27}, {190, 36}, {190, 45}, {190, 54}, {190, 63},     {197, 63}, {197, 54}, {197, 45}, {197, 36}, {197, 27}, {197, 18}, {197,  9}, {197,  0},
 
-        {204,  0}, {204,  9}, {204, 18}, {204, 27}, {204, 36}, {204, 45}, {204, 54}, {204, 63},     {221, 63}, {221, 54}, {221, 45}, {221, 36}, {221, 27}, {221, 18}, {221,  9}
+        {204,  0}, {204,  9}, {204, 18}, {204, 27}, {204, 36}, {204, 45}, {204, 54}, {204, 63},     {221, 63}, {221, 54}, {221, 45}, {221, 36}, {221, 27}, {221, 18}
     }, {
         // LED Index to Flag
         4, 4, 4, 4, 4, 4, 4, 4,    4, 4, 4, 4, 4, 4, 4, 4,
@@ -254,7 +254,7 @@ led_config_t g_led_config = { // K20 Key Matrix & 31FL3731 KEYBOARD LED TEST arr
         4, 4, 4, 4, 4, 4, 4, 4,    4, 4, 4, 4, 4, 4, 4, 4,
         4, 4, 4, 4, 4, 4, 4, 4,    4, 4, 4, 4, 4, 4, 4, 4,
 
-        4, 4, 4, 4, 4, 4, 4, 4,    4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4,    4, 4, 4, 4, 4, 4
     }
 };
 #endif

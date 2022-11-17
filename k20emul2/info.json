@@ -1,42 +1,42 @@
 {
-    "manufacturer": "jamesYun",
+    "manufacturer": "ThinkWay",
     "keyboard_name": "CROAD K20",
-    "maintainer": "skylupin03",
+    "maintainer": "JamesYun",
+    "url": "http://www.thway.co.kr/bbs/board.php?bo_table=product&wr_id=124",
 
-    "url": "",
     "usb": {
-        "device_version": "1.0.0",
+        "vid": "0x1C6C",
         "pid": "0xF000",
-        "vid": "0x1C6C"
+        "device_version": "0.5.0",
     },
-    
+
     "layouts": {
         "LAYOUT": {
             "layout": [
 {"label":"ESC", "x":0, "y":0},
- {"label":"TAB", "x":1, "y":0}, 
- {"label":"BS", "x":2, "y":0}, 
- {"label":"FN", "x":3, "y":0}, 
- {"label":"CCW", "x":4.15, "y":0, "w":0.6, "h":0.5}, 
- {"label":"Mute", "x":4.25, "y":0}, 
- {"label":"CW", "x":4.75, "y":0, "w":0.6, "h":0.5}, 
+ {"label":"TAB", "x":1, "y":0},
+ {"label":"BS", "x":2, "y":0},
+ {"label":"FN", "x":3, "y":0},
+ {"label":"CCW", "x":4.15, "y":0, "w":0.6, "h":0.5},
+ {"label":"Mute", "x":4.25, "y":0},
+ {"label":"CW", "x":4.75, "y":0, "w":0.6, "h":0.5},
 
- {"label":"Num Lock", "x":0, "y":1}, 
- {"label":"/", "x":1, "y":1}, 
- {"label":"*", "x":2, "y":1}, 
- {"label":"-", "x":3, "y":1}, 
- {"label":"7", "x":0, "y":2}, 
- {"label":"8", "x":1, "y":2}, 
+ {"label":"Num Lock", "x":0, "y":1},
+ {"label":"/", "x":1, "y":1},
+ {"label":"*", "x":2, "y":1},
+ {"label":"-", "x":3, "y":1},
+ {"label":"7", "x":0, "y":2},
+ {"label":"8", "x":1, "y":2},
  {"label":"9", "x":2, "y":2},
   {"label":"+", "x":3, "y":2, "h":2},
-   {"label":"4", "x":0, "y":3}, 
-   {"label":"5", "x":1, "y":3}, 
-   {"label":"6", "x":2, "y":3}, 
-   {"label":"1", "x":0, "y":4}, 
-   {"label":"2", "x":1, "y":4}, 
-   {"label":"3", "x":2, "y":4}, 
-   {"label":"Enter", "x":3, "y":4, "h":2}, 
-   {"label":"0", "x":0, "y":5, "w":2}, 
+   {"label":"4", "x":0, "y":3},
+   {"label":"5", "x":1, "y":3},
+   {"label":"6", "x":2, "y":3},
+   {"label":"1", "x":0, "y":4},
+   {"label":"2", "x":1, "y":4},
+   {"label":"3", "x":2, "y":4},
+   {"label":"Enter", "x":3, "y":4, "h":2},
+   {"label":"0", "x":0, "y":5, "w":2},
    {"label":".", "x":2, "y":5}
             ]
         }

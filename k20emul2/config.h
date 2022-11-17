@@ -34,9 +34,6 @@
 #define BOOTMAGIC_LITE_ROW                 0
 #define BOOTMAGIC_LITE_COLUMN              0
 
-// configure oled driver for the 128x32 oled
-//#define OLED_UPDATE_INTERVAL 33 // ~30fps
-
 //#define LED_NUM_LOCK_PIN    B12
 //#define LED_CAPS_LOCK_PIN   B14
 //#define LED_SCROLL_LOCK_PIN B15
@@ -110,7 +107,7 @@
     #define WS2812_SPI_MOSI_PAL_MODE    5      // MOSI pin "alternate function", see the respective datasheet for the appropriate values for your MCU. default: 5   // 0 for F072
     // #define WS2812_SPI_SCK_PIN       B13     //for F072?
     // #define WS2812_SPI_SCK_PAL_MODE  0       //for F072?
-    #define WS2812_SPI_DIVISOR	        4       //16
+    #define WS2812_SPI_DIVISOR	        8      //4 4와 8만 되나?       //16
     #define WS2812_SPI_USE_CIRCULAR_BUFFER    // fix Fliker (이 기능을 켜면 access가 많아짐)
 
 //#define RGBLIGHT_LED_MAP { 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 23, 21, 19, 17, 15, 13, 11, 9, 7, 5, 3, 1  }
@@ -118,12 +115,13 @@
 #endif
 
 #ifdef RGB_MATRIX_ENABLE
-#define DRIVER_LED_TOTAL 255       // for RGB matrix
+#define DRIVER_LED_TOTAL 254       // for RGB matrix //PWM으로 하면 갯수 255이상에서 에러발생 / SPI는 혹시 255에상에서 다운?
+    #define RGBLED_NUM 254
 #define RGB_MATRIX_STARTUP_VAL 40
 #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 #define RGB_MATRIX_KEYPRESSES
 #define RGB_DISABLE_WHEN_USB_SUSPENDED  // turn off effects when suspended
-#define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_CYCLE_LEFT_RIGHT
+//#define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_CYCLE_LEFT_RIGHT
 
 #define ENABLE_RGB_MATRIX_ALPHAS_MODS
 #define ENABLE_RGB_MATRIX_GRADIENT_UP_DOWN
@@ -155,6 +153,8 @@
 #define ENABLE_RGB_MATRIX_PIXEL_RAIN
 #define ENABLE_RGB_MATRIX_PIXEL_FLOW
 
+#define ENABLE_RGB_MATRIX_PIXEL_FRACTAL
+
 #define ENABLE_RGB_MATRIX_TYPING_HEATMAP
 #define ENABLE_RGB_MATRIX_DIGITAL_RAIN
 
@@ -173,11 +173,11 @@
 #endif
 //------------------------------------------------------
 #ifdef RGBLIGHT_ENABLE
-    #define RGBLED_NUM 255             // for RGB Light & RGB matrix
+    #define RGBLED_NUM 60             // for RGB Light & RGB matrix
     #define RGBLIGHT_HUE_STEP 8
     #define RGBLIGHT_SAT_STEP 8
     #define RGBLIGHT_VAL_STEP 8
-    #define RGBLIGHT_LIMIT_VAL 40 /* The maximum brightness level */
+    #define RGBLIGHT_LIMIT_VAL 255 /* The maximum brightness level */
     #define RGBLIGHT_SLEEP  /* If defined, the RGB lighting will be switched off when the host goes to sleep */
   #define RGBLIGHT_EFFECT_BREATHING
   #define RGBLIGHT_EFFECT_RAINBOW_MOOD
@@ -191,10 +191,10 @@
   #define RGBLIGHT_EFFECT_TWINKLE
     /* default setup after eeprom reset */
     #define RGBLIGHT_DEFAULT_MODE (RGBLIGHT_EFFECT_RAINBOW_MOOD + 6)
-    #define RGBLIGHT_DEFAULT_HUE 152
-    #define RGBLIGHT_DEFAULT_SAT 232
-    #define RGBLIGHT_DEFAULT_VAR 40         // 밝기
-    #define RGBLIGHT_DEFAULT_SPD 2
+//    #define RGBLIGHT_DEFAULT_HUE 152         // 이것 4개를 설정하면 BREATHING이 안되는건가? TWINKLE은 계속 안되고 있음
+//    #define RGBLIGHT_DEFAULT_SAT 232
+//    #define RGBLIGHT_DEFAULT_VAR 255         // 밝기
+//    #define RGBLIGHT_DEFAULT_SPD 2
     //#define RGBLIGHT_LAYERS  // 뭐지?
 #endif
 
@@ -281,7 +281,7 @@
 // #define OLED_DISPLAY_ADDRESS 0x3C
 // #define OLED_COM_PINS 0x12           // 크기가 작아짐.. 어디다 사용? 128x64에 사용하는 건가? 뭐지?
 
-// #define OLED_IC OLED_IC_SSD1306
+// #define OLED_IC OLED_IC_SSD1306      //안해도 default는 SSD1306
 
 /* Required for SH1106 Oled Driver */
 #define OLED_IC OLED_IC_SH1106      // YwRobot 1.3inch
@@ -290,4 +290,7 @@
 #define OLED_TIMEOUT 20000              // Turns off OLED after said amount of milliseconds
 #define OLED_DISPLAY_128X64
 #define OLED_BRIGHTNESS 255
+
+//#define OLED_UPDATE_INTERVAL 33 // ~30fps
+
 #endif

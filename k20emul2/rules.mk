@@ -36,12 +36,11 @@ OLED_ENABLE = yes
 BACKLIGHT_ENABLE = yes       # Enable keyboard backlight functionality
 BACKLIGHT_DRIVER = pwm	     # pwm, software, custom or no
 
-RGBLIGHT_ENABLE = yes       # Enable keyboard RGB underglow (WS2811, WS2812, WS2812B, WS2812C, SK6812, SK6812MINI, SK6805, APA102)
+RGBLIGHT_ENABLE = no       # Enable keyboard RGB underglow (WS2811, WS2812, WS2812B, WS2812C, SK6812, SK6812MINI, SK6805, APA102)
 WS2812_DRIVER = spi			# bitbang, spi(circular buffer issue), pwm(too much access, Noise도 심한듯)
 
-RGB_MATRIX_ENABLE = no		# IS31FL3731, 3733, 3737, WS2812등등
-RGB_MATRIX_DRIVER = WS2812
-#RGB_MATRIX_DRIVER = IS31FL3731
+RGB_MATRIX_ENABLE = yes
+RGB_MATRIX_DRIVER = WS2812	# IS31FL3731, 3733, 3737, WS2812등등
 
 # RGB layout selection
 #RGB_ENCODERS = yes # For RGB encoders, solder on both WS2811 chips

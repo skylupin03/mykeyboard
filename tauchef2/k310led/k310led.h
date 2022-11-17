@@ -16,7 +16,6 @@
  */
 
 #pragma once
-
 #include "quantum.h"
 
 // 커스텀 키 갯수가 16개 한계일까?
@@ -37,8 +36,8 @@ KC_LOCK_SCREEN,         // MAC_key
     KC_ROPTN,               // MAC_key 불필요한듯
     KC_LCMMD,               // MAC_key 불필요한듯
     KC_RCMMD,               // MAC_key 불필요한듯
-//    KC_TASK_VIEW,           // for win (gui + tap) 
-//    KC_FILE_EXPLORER,       // for win (gui + e) 
+//    KC_TASK_VIEW,           // for win (gui + tap)
+//    KC_FILE_EXPLORER,       // for win (gui + e)
     KC_STER,                // LED effect step reverse
     KC_SPDI,                // LED effect speed up
     KC_SPDD,                // LED effect speed down
@@ -47,7 +46,7 @@ KC_LOCK_SCREEN,         // MAC_key
 #else
     KC_TGUI = SAFE_RANGE,   // Toggle between GUI Lock or Unlock
     KC_WIN_MODE,             // WINDOWS Keyboard로 변경
-    KC_MAC_MODE,             // Machintosh Keyboard로 변경    
+    KC_MAC_MODE,             // Machintosh Keyboard로 변경
     KC_MISSION_CONTROL,     // MAC_key
     KC_LAUNCHPAD,           // MAC_key
 KC_SPOTLIGHT,           // MAC_key
@@ -58,8 +57,8 @@ KC_LOCK_SCREEN,         // MAC_key
     KC_ROPTN,               // MAC_key 불필요한듯
     KC_LCMMD,               // MAC_key 불필요한듯
     KC_RCMMD,               // MAC_key 불필요한듯
-//    KC_TASK_VIEW,           // for win (gui + tap) 
-//    KC_FILE_EXPLORER,       // for win (gui + e) 
+//    KC_TASK_VIEW,           // for win (gui + tap)
+//    KC_FILE_EXPLORER,       // for win (gui + e)
     KC_STER,                // LED effect step reverse
     KC_SPDI,                // LED effect speed up
     KC_SPDD,                // LED effect speed down
